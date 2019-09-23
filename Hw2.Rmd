@@ -95,3 +95,9 @@ gapminder  %>%
     geom_point(alpha = 0.1)
         scale_x_log10("GDP per capita", labels = scales::dollar_format())
 ```
+
+## Recycling
+```{r}
+filter(gapminder, country == c("Rwanda", "Afghanistan"))
+```
+It looks like they analyst succeeded in getting data from Afghanistan and Rwanda, but it appears that half the data disappeared. The Gapminder dataset has entries every five years, but the output data hasdata only every 10 years.
